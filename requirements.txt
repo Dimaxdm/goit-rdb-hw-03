@@ -1,0 +1,18 @@
+# HW03 — UCI Bank Marketing: PostgreSQL, COPY, DQL, EDA
+# Python >= 3.12 (notebook uses PEP 701 f-strings, e.g. f"{"column": <20}")
+#
+# PostgreSQL 16 server itself is NOT a pip package:
+#   - Google Colab: installed by the first notebook cell (apt-get install postgresql)
+#   - locally: see README.md ("Локальний запуск")
+
+# DB access from Python
+sqlalchemy>=2.0
+psycopg2-binary>=2.9          # driver; cursor.copy_expert() is used for COPY FROM STDIN
+
+# %load_ext sql / %%sql cells
+ipython-sql==0.5.0
+prettytable>=3.12             # provides the '_DEPRECATED_DEFAULT' style set via %config SqlMagic.style
+
+# result display + notebook runtime
+pandas>=2.0
+jupyter>=1.0
